@@ -1,6 +1,8 @@
 # Errawr::Rails
 
-TODO: Write a gem description
+Errawr support for Rails
+
+[![Build Status](https://travis-ci.org/anthonator/errawr-rails.png?branch=master)](https://travis-ci.org/anthonator/errawr-rails) [![Coverage Status](https://coveralls.io/repos/anthonator/errawr-rails/badge.png?branch=master)](https://coveralls.io/r/anthonator/errawr-rails?branch=master)
 
 ## Installation
 
