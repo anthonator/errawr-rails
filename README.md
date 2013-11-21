@@ -2,7 +2,7 @@
 
 Raise and render errors in Rails using Errawr
 
-[![Build Status](https://travis-ci.org/anthonator/errawr-rails.png?branch=master)](https://travis-ci.org/anthonator/errawr-rails) [![Coverage Status](https://coveralls.io/repos/anthonator/errawr-rails/badge.png?branch=master)](https://coveralls.io/r/anthonator/errawr-rails?branch=master) [![Code Climate](https://codeclimate.com/github/anthonator/errawr-rails.png)](https://codeclimate.com/github/anthonator/errawr-rails)
+[![Build Status](https://travis-ci.org/anthonator/errawr-rails.png?branch=master)](https://travis-ci.org/anthonator/errawr-rails) [![Dependency Status](https://gemnasium.com/anthonator/errawr-rails.png)](https://gemnasium.com/anthonator/errawr-rails) [![Coverage Status](https://coveralls.io/repos/anthonator/errawr-rails/badge.png?branch=master)](https://coveralls.io/r/anthonator/errawr-rails?branch=master) [![Code Climate](https://codeclimate.com/github/anthonator/errawr-rails.png)](https://codeclimate.com/github/anthonator/errawr-rails)
 
 ## Installation
 
