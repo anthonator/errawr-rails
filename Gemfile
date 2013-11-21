@@ -23,8 +23,9 @@ platforms :jruby do
 end
 
 platforms :rbx do
-  gem 'rubysl'
+  gem 'racc'
   gem 'rubinius-coverage', github: 'rubinius/rubinius-coverage'
+  gem 'rubysl'
 end
 
 group :development do
