@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Errawr::Rails::VERSION
   spec.authors       = ['Anthony Smith']
   spec.email         = ['anthony@sticksnleaves.com']
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Raise and render errors in Rails using Errawr}
+  spec.summary       = %q{Errawr support for Rails}
   spec.homepage      = ''
   spec.license       = 'MIT'
 
