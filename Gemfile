@@ -24,6 +24,7 @@ end
 
 platforms :rbx do
   gem 'rubysl'
+  gem 'rubinius-coverage', github: 'rubinius/rubinius-coverage'
 end
 
 group :development do
