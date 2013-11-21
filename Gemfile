@@ -22,6 +22,10 @@ platforms :jruby do
   gem 'activerecord-jdbcsqlite3-adapter'
 end
 
+platforms :rbx do
+  gem 'rubysl'
+end
+
 group :development do
   gem 'coveralls', require: false
 end
