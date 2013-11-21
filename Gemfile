@@ -25,5 +25,3 @@ end
 group :development do
   gem 'coveralls', require: false
 end
-
-gem 'rubysl'
