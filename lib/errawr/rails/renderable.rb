@@ -1,16 +1,22 @@
 module Errawr
   module Rails
     module Renderable
-      def self.included(base)
-        base.send(:include, Errawr::Rails) unless base.ancestors.include?(Errawr::Rails)
-        base.send(:include, ActiveSupport::Rescuable)
-        base.class_eval do
-          rescue_from Errawr::Error, with: :render_errawr
+      def self.render_with(handler)
+        mod = Module.new
+        mod.define_singleton_method :included do |object|
+          object.class_eval do
+            object.const_set(:ERRAWR_HANDLER, handler)
+            rescue_from Errawr::Error, with: :render_errawr
+            
+            private
+            def render_errawr(error)
+              handler =  self.class.const_get(:ERRAWR_HANDLER)
+              self.status = error.context[:http_status] || 500
+              render handler.new.call(error)
+            end
+          end
         end
-      end
-      
-      def render_errawr
-        raise 'Method render_errawr not defined...'
+        mod
       end
     end
   end

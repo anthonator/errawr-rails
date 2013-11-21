@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Errawr::Rails::JSON do
+describe Errawr::Rails::Renderers::JSON do
   context 'RenderableController', type: :controller do
     controller(RenderableController) do
       extend RSpec::Rails::ControllerExampleGroup::BypassRescue

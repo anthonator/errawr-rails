@@ -1,5 +1,5 @@
 class RenderableController < ApplicationController
-  include Errawr::Rails::JSON
+  include Errawr::Rails.with_renderer(Errawr::Rails::Renderers::JSON)
   
   def index
     error!(:bad_request)
