@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Errawr::Rails::JSON do
   context 'RenderableController', type: :controller do
-    controller(Dummy::RenderableController) do
+    controller(RenderableController) do
       extend RSpec::Rails::ControllerExampleGroup::BypassRescue
     end
     
@@ -24,7 +24,7 @@ describe Errawr::Rails::JSON do
   end
   
   context 'MetadataController', type: :controller do
-    controller(Dummy::MetadataController) do
+    controller(MetadataController) do
       extend RSpec::Rails::ControllerExampleGroup::BypassRescue
     end
     
