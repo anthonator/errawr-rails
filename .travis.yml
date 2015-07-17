@@ -17,3 +17,5 @@ env:
 matrix:
   allow_failures:
     - env: "RAILS_VERSION=master"
+    - rvm: ruby-head
+    - rvm: jruby-head
