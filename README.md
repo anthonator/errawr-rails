@@ -42,7 +42,7 @@ If you'd like to catch and render errors in a particular format include ```Erraw
 
 ```ruby
 class SomeController < ApplicationController
-  include Errawr::Rails.with_renderer(Rails::Errawr::Renderers::JSON)
+  include Errawr::Rails.with_renderer(Errawr::Rails::Renderers::JSON)
 
   def index
     if params[:dont_work] == true
