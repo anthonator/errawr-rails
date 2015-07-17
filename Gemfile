@@ -24,4 +24,5 @@ end
 
 group :development do
   gem 'coveralls', require: false
+  gem 'test-unit'
 end
