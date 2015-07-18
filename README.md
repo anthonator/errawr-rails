@@ -65,7 +65,7 @@ Depending on what renderer is used additional metadata may be added to the respo
 
 ```ruby
 class SomeController < ApplicationController
-  include Errawr::Rails.with_renderer(Rails::Errawr::Renderers::JSON)
+  include Errawr::Rails.with_renderer(Errawr::Rails::Renderers::JSON)
 
   def index
     if params[:dont_work] == true
@@ -83,7 +83,7 @@ end
 }
 ```
 
-Currently the only renderer that ships with Errawr::Rails is ```Rails::Errawr::Renderers::JSON```.
+Currently the only renderer that ships with Errawr::Rails is ```Errawr::Rails::Renderers::JSON```.
 
 
 ### Custom Renderers
