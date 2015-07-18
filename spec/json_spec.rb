@@ -5,43 +5,39 @@ describe Errawr::Rails::Renderers::JSON do
     controller(RenderableController) do
       extend RSpec::Rails::ControllerExampleGroup::BypassRescue
     end
-    
+
     before(:each) do
       @request = ActionController::TestRequest.new
     end
-  
+
     it 'should render a bad_request error in JSON' do
-      error = Errawr::Mapper[:bad_request]
       get :index
-      response.body.should == { error: error.key, description: error.message }.to_json
+      expect(response.body).to eq({ error: 'bad_request', description: 'Bad Request' }.to_json)
     end
-    
+
     it 'should render a status of 400 for bad request' do
-      error = Errawr::Mapper[:bad_request]
       get :index
-      response.status.should == 400
+      expect(response.status).to eq(400)
     end
   end
-  
+
   context 'MetadataController', type: :controller do
     controller(MetadataController) do
       extend RSpec::Rails::ControllerExampleGroup::BypassRescue
     end
-    
+
     before(:each) do
       @request = ActionController::TestRequest.new
     end
-  
+
     it 'should render metadata in the JSON response' do
-      error = Errawr::Mapper[:bad_request]
       get :index
-      response.body.should == { error: 'dummy_error', description: 'Dummy Message', developer: 'Anthony' }.to_json
+      expect(response.body).to eq({ error: 'dummy_error', description: 'Dummy Message', developer: 'Anthony' }.to_json)
     end
-    
+
     it 'should render a status of 500 for an error that doesnt specify http_status' do
-      error = Errawr::Mapper[:bad_request]
       get :index
-      response.status.should == 500
+      expect(response.status).to eq(500)
     end
   end
 end
